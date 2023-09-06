@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+  <head>
+    <title>HTML</title>
+  </head>
+  <body>
+<h1 style="background-color:blue;">My background is blue</h1>
+    <h1 style="color:Tomato;">Hello World</h1>
+     <img src="india.jpg" alt="india map" style="width:500px;height:600px;"> 
+     <table>
+        <caption>details</caption>
+  <tr>
+    <th>Sno</th>
+    <th>Name</th>
+    <th>contact</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>ram</td>
+    <td>634192734</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>shyam</td>
+    <td>894787514</td>
+  </tr>
+</table> 
+    
+<h2> unordered HTML list</h2>
+<ul>
+  <li>apple</li>
+  <li>banana</li>
+  <li>mango</li>
+</ol> 
+    <h2> ordered HTML list</h2>
+
+<ol>
+  <li>apple</li>
+  <li>banana</li>
+  <li>mango</li>
+</ol> 
+    
+
+
+    
+  </body>
+</html>
