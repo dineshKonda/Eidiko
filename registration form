@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<title>
+REGISTRATION FORM
+</title>
+</head>
+<body>
+<h1>REGISTRAION FORM</h1>
+<form action="./s1" method="get">
+Enter your First name:
+<input type="text" value=" "><br>
+Enter your last name name:
+<input type="text" value=" "><br>
+Your highest qualification:
+<input type ="radio" value="">
+<label for="10">10</label>
+<input type ="radio" value="">
+<label for="12">12</label>
+<input type ="radio" value="">
+<label for="bachelors">bachelors</label><br>
+skills:<input type="checkbox" value="">
+<label for="html">HTML</label>
+<input type="checkbox" value="">
+<label for="css">CSS</label>
+<input type="checkbox" value="">
+<label for="js">JS</label><br>
+Gender:
+<select id="gender" name="gender">
+<option value="male">MALE</option>
+<option value="female">FEMALE</option>
+<option value="others">OTHERS</option>
+</select>
+<br>
+<input type="reset" value="reset">
+<input type="submit" value="submit">
+</form>
+</body>
+<html>
