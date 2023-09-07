@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, td, th {
+  border: 1px solid black;
+   padding: 15px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td {
+  text-align: center;
+}
+th{
+background-color:black;
+color:white;
+</style>
+</head>
+<body>
+
+<h2>The text-align Property</h2>
+
+<p>This property sets the horizontal alignment (like left, right, or center) of the content in th or td.</p>
+
+<table>
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>id</th>
+  </tr>
+  <tr>
+    <td>dinesh</td>
+    <td>k</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>nithin</td>
+    <td>k</td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td>sumanth</td>
+    <td>S</td>
+    <td>3</td>
+  </tr>
+ 
+</table>
+
+</body>
+</html>
