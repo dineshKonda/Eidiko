@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ul.a {
+  list-style-type: circle;
+  background:tomato;
+  
+}
+
+ol.b {
+  list-style-type: lower-alpha;
+  background:yellow;
+ 
+}
+
+</style>
+</head>
+<body>
+
+
+<h2>ordered and unordered lists<h2>
+<ul class="a">
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ul>
+
+
+<ol class="b">
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ol>
+
+</body>
+</html>
