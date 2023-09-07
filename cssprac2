@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+p {
+  text-align: center;
+  color:yellow;
+} 
+#d {
+  text-align: center;
+  color: red;
+}
+p.one {
+  text-align: center;
+  color: blue;
+}
+h3, h4 {
+  text-align: center;
+  color: orange;
+</style>
+</head>
+<body>
+<p>i am affected</p>
+<p id="d">heyyyy</p>
+<h5 class="one">i am not affected</h5>
+<p class="one">i am blue and center-aligned.</p> 
+<h3> i am orange and centre aligned</h3>
+  <h4> i am orange and centre aligned</h4>
+</body>
+</html>
