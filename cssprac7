@@ -13,7 +13,7 @@ div {
 </head>
 <body>
 
-<div>You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.</div>
-
+<div>
+The HTML division tag, called "div" for short, is a special element that lets you group similar sets of content together on a web page. You can use it as a generic container for associating similar content</div>
 </body>
 </html>
