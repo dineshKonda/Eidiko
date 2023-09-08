@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.button {
+  background-color:red;
+  color: white;
+  cursor: pointer;
+  font-size: 30px;
+  padding:20px;
+  margin:30px;
+}
+
+</style>
+</head>
+<body>
+
+
+
+<button class="button">Click</button>
+
+</body>
+</html>
