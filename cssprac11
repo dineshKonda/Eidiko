@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+div {
+  width: 100px;
+  height: 100px;
+  background:lightblue;
+  transition: width 1s, height 1s;
+}
+
+div:hover {
+  width: 200px;
+  height: 200px;
+}
+</style>
+</head>
+<body>
+
+
+
+<div>Transition </div>
+
+</body>
+</html>
