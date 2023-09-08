@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div {
+  width: 200px;
+  height:100px;
+  background-color:orange;
+  border: 1px solid black;
+    transform: rotate(20deg);
+     outline:50px;
+     margin:100px;
+}
+div#a {
+  transform: skewX(20deg);
+}
+
+
+</style>
+</head>
+<body>
+
+
+<div>
+I rotated 20 deg
+</div>
+<div id="a">
+I am Skewed</div>
+
+
+</body>
+</html>
