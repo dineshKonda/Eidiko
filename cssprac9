@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+h1 {
+  text-shadow: 2px 2px 5px blue;
+}
+div {
+  width: 250px;
+  height: 100px;
+  background-color:pink;
+  border: 3px solid black;
+  transform: translate(30px,50px);
+  text-align:center
+}
+</style>
+</head>
+<body>
+<h1>Text shadow</h1>
+<div>
+Translated
+</div>
+</body>
+</html>
