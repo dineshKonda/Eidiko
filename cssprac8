@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+#a{
+  border-radius: 25px 30px 30px 25px;
+  background:yellow;
+  padding: 50px; 
+  width: 150px;
+  height: 100px; 
+
+}
+#b{
+  border-radius: 25px 30px 30px 25px;
+  padding: 50px; 
+  width: 150px;
+  height: 100px; 
+    background-image: url(img_flwr.gif), url(paper.gif);
+  background-position: right bottom, left top;
+  background-repeat: no-repeat, repeat;
+</style>
+</head>
+<body>
+<p id="a">This has rounded corners</p>
+<p id="b">This has two background images</p>
+
+</body>
+</html>
