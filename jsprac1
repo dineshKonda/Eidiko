@@ -1,0 +1,11 @@
+let name="dinesh";
+let name2="sai";
+console.log(name);
+console.log(name.length);
+console.log(name[1]);
+console.log(name.toUpperCase());
+console.log(name.toLowerCase());
+console.log(name.slice(2));
+console.log(name.slice(2,4));
+console.log(name.replace("din","mah"));
+console.log(name.concat(name2));
