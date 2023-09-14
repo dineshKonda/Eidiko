@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+THE COUNTER IS <p id="a">0</p>
+<button onclick="firstfunction()">ClickMe</button>
+<script>
+function firstfunction(){
+let x=document.getElementById("a").innerHTML;
+x++;
+ document.getElementById("a").innerHTML=x;
+}
+
+</script>
+</body>
+</html>
