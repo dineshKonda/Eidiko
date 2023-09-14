@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<body>
+<select onchange="change()"
+id="selecting"style="visibility:visible;">
+<option value="Select">Select</option>
+<option value="Name">Name</option>
+<option value="Id">Id</option>
+</select>
+<select onchange="change1()"id="selectingname" style="visibility:hidden;">
+<option value="name1">Dinesh</option>
+<option value="name2">Nithin</option>
+<option value="name3">Sumanth</option>
+</select>
+<select onchange="change2()"id="selectingid"style="visibility:hidden;">
+<option value="name1">1</option>
+<option value="name2">10</option>
+<option value="name3">5</option>
+</select>
+<select onchange="change3()"id="selectingnone"style="visibility:visible;">
+<option value="name1">        </option>
+<option value="name2">        </option>
+<option value="name3">        </option>
+
+</select>
+<script>
+function change()
+{
+var x=document.getElementById("selecting").value;
+if(x=="Name")
+{
+document.getElementById("selectingname").style.visibility="visible";
+document.getElementById("selectingid").style.visibility="hidden";
+document.getElementById("selectingnone").style.visibility="hidden";
+}
+else if(x=="Id")
+{
+document.getElementById("selectingid").style.visibility="visible";
+document.getElementById("selectingname").style.visibility="hidden";
+document.getElementById("selectingnone").style.visibility="hidden";
+}
+else if(x=="Select")
+{
+document.getElementById("selectingid").style.visibility="hidden";
+document.getElementById("selectingname").style.visibility="hidden";
+document.getElementById("selectingnone").style.visibility="visible";
+}
+}
+</script>
+</body>
+</html>
