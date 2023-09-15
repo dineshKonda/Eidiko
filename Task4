@@ -1,50 +1,48 @@
 <!DOCTYPE html>
 <html>
-<head>
-</head>
 <body>
+    Select an option:
+    <select id="select1" onchange="myFunction()">
+        <option value="name">Name</option>
+        <option value="id">ID</option>
+    </select>
+Result:
+    <select id="select2"onchange="myFunction2()" onchange="myFunction3()">
+    </select>
+    <p id="fun"></p>
+
     <script>
-        let names = ["Dinesh", "Mahesh", "Nithin"];
+        let names = ["Manoj", "Mahesh", "Vamshi"];
         let ids = [1, 2, 3];
-        
-        function func() {
-            let select1 = document.getElementById("select1");
-            let select2 = document.getElementById("select2");
-            let demo = document.getElementById("demo");
-            select2.innerHTML = "";
-            
+
+        function myFunction() {
+            let a1= document.getElementById("select1");
+            let a2= document.getElementById("select2");
+            select2.innerHTML = ""; 
+
             if (select1.value === "name") {
                 for (let i = 0; i < names.length; i++) {
                     let option = document.createElement("option");
                     option.text = names[i];
+                    option.value = names[i];
                     select2.add(option);
-                }
+              }
+              
             } else if (select1.value === "id") {
                 for (let i = 0; i < ids.length; i++) {
                     let option = document.createElement("option");
                     option.text = ids[i];
+                    option.value = ids[i];
                     select2.add(option);
                 }
             }
         }
-        func();
-        function func2()
+        myFunction();
+        function myFunction2()
         {
-            let x =document.getElementById("demo");
-            x.innerHTML = "Your" +" "+select1.value+" "+"is: " + select2.options[select2.selectedIndex].text;
+        let b=document.getElementById("fun");
+        b.innerHTML="Your "+ select1.value  +" is "+select2.options[select2.selectedIndex].value;
         }
-        func2();
     </script>
-    
-    Select an option:
-    <select id="select1" onchange="func()">
-        <option value="name">Name</option>
-        <option value="id">ID</option>
-    </select>
-    <br><br>
-    Result:
-    <select id="select2" onchange="func2()">
-    </select>
-    <p id="demo"></p>
 </body>
 </html>
