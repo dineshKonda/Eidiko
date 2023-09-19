@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<body>
+   
+    
+    <input type="text" id="textInput">
+    <button onclick="addItem()">Add</button>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Value</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+         
+        </tbody>
+    </table>
+
+    <script>
+    
+        let a1 = [];
+
+        function addItem() {
+            let textInput = document.getElementById('textInput');
+            let newItem = textInput.value.trim();
+                a1.push(newItem);
+                displaytable();
+            }
+        
+
+        function removeItem(index) {
+            a1.splice(index, 1);
+            displaytable();
+        }
+        function displaytable() {
+            let tableBody = document.getElementById('tableBody');
+            tableBody.innerHTML = '';
+
+            a1.forEach((item, index) => {
+                let row = tableBody.insertRow();
+                let cell1 = row.insertCell(0);
+                let cell2 = row.insertCell(1);
+
+                cell1.innerHTML = item;
+                let removeButton = document.createElement('button');
+                removeButton.innerHTML = 'Remove';
+                removeButton.onclick = () => removeItem(index);
+                cell2.appendChild(removeButton);
+            });
+        }
+    </script>
+</body>
+</html>
