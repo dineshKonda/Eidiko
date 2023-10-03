@@ -12,7 +12,7 @@ Result:
     <p id="fun"></p>
 
     <script>
-        let names = ["Manoj", "Mahesh", "Vamshi"];
+        let names = ["Dinesh", "Mahesh", "Nithin"];
         let ids = [1, 2, 3];
 
         function myFunction() {
