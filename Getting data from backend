@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Fetch and Display Employee Details</title>
+  <style>
+    #employeeTable thead {
+      display: none;
+    }
+    #shiftTables thead {
+      display: none;
+    }
+
+    .shiftTable {
+      border: 1px solid black;
+    }
+
+    .shiftTable th,
+    .shiftTable td {
+      border: 1px solid black;
+      padding: 5px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <button onclick="fetchAndDisplayEmployees()">Fetch</button>
+
+  <table id="employeeTable" border="1">
+    <thead>
+      <tr>
+        <th>Employee ID</th>
+        <th>Employee Name</th>
+        <th>Date of Joining</th>
+        <th>Status</th>
+        <th>Number</th>
+        <th>About</th>
+        <th>View Shift</th>
+      </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+  </table>
+  <table id="shiftTables" border="1">
+    <thead>
+      <tr>
+        <th>Shift ID</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+        <th>Shift Start Time</th>
+        <th>Shift End Time</th>
+        <th>Modify By</th>
+        <th>Week Off</th>
+      </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+  </table>
+
+  <script>
+    let result;
+
+    function fetchAndDisplayEmployees() {
+      let xmlhttp = new XMLHttpRequest();
+      xmlhttp.onreadystatechange = function () {
+        if (this.readyState === 4 && this.status === 200) {
+          result = JSON.parse(this.responseText);
+          let table = document.getElementById("employeeTable").getElementsByTagName('tbody')[0];
+          table.innerHTML = "";`
+          ${document.getElementById("employeeTable").getElementsByTagName('thead')[0].style.display = "table-header-group"}`;
+
+          result.Result.forEach(Result => {
+            let row = table.insertRow(-1);
+            let cell1 = row.insertCell(0);
+            let cell2 = row.insertCell(1);
+            let cell3 = row.insertCell(2);
+            let cell4 = row.insertCell(3);
+            let cell5 = row.insertCell(4);
+            let cell6 = row.insertCell(5);
+            let cell7 = row.insertCell(6);
+
+            cell1.innerHTML = Result.empId;
+            cell2.innerHTML = Result.empName;
+            cell3.innerHTML = Result.doj;
+            cell4.innerHTML = Result.status;
+            cell5.innerHTML = Result.number;
+            cell6.innerHTML = Result.about;
+            cell7.innerHTML = `<button onclick="viewShifts(${Result.empId})">View Shift</button>`;
+          });
+        }
+      };
+      xmlhttp.open("GET", "http://192.168.1.116:9090/emp/allEmployee", true);
+      xmlhttp.send();
+    }
+
+    function viewShifts(empId) {
+      let shiftTable = document.getElementById("shiftTables").getElementsByTagName('tbody')[0];
+      shiftTable.innerHTML = `
+      ${document.getElementById("shiftTables").getElementsByTagName('thead')[0].style.display = "table-header-group"}
+         <tbody>
+          ${result.Result.find(emp => emp.empId === empId).shift.map(shift => `
+            <tr>
+              <td>${shift.shiftId}</td>
+              <td>${shift.startDate}</td>
+              <td>${shift.endDate}</td>
+              <td>${shift.shiftStartTime}</td>
+              <td>${shift.shiftEndTime}</td>
+              <td>${shift.modifyBy}</td>
+              <td>${shift.weekOff}</td>
+            </tr>
+          `).join('')}
+        </tbody>
+      `;
+    }
+  </script>
+</body>
+</html>
